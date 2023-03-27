@@ -33,7 +33,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const category = params.id;
     const { blogs, categories } = getSortedBlogsData();
-    const filteredBlogs = blogs.filter(blog => blog.categories.includes(category));
+    const filteredBlogs = blogs.filter((blog: any) => blog.categories.includes(category));
     return {
         props: {
             blogs: filteredBlogs,

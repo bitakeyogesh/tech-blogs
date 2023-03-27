@@ -30,10 +30,9 @@ export function getSortedBlogsData() {
             ...frontMatterData,
         };
     }).filter(blog => blog);
-
     // Sort blogs by date
-    const sortedBlogsData = allBlogsData.sort((a, b) => {
-        if (a.date < b.date) {
+    const sortedBlogsData = allBlogsData.sort((blog1: any, blog2: any) => {
+        if (blog1.date < blog2.date) {
             return 1;
         } else {
             return -1;
