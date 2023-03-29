@@ -7,7 +7,6 @@ author: {
     avatar: '/images/yogesh_avatar.jpg'
 }
 blogImage: '/images/blog1.jpg'
-draft: true
 readTime: 6
 ---
 
