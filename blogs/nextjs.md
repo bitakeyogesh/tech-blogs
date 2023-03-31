@@ -16,6 +16,15 @@ Next.js is a popular and powerful React JS based framework for building full sta
 
 Next.js is not an replacement of React. Next.js is an react based framework where react js is a library to build UI components. 
 
+#### Setup using create-next-app
+- Run `npx create-next-app@latest` or you can also pass --typescript flag for typescript project.
+- Run `npm run dev`
+- Visit `http://localhost:3000` to view application.
+ 
+Folder structure will look like this
+![Next JS Folder StructureS](/images/nextjs-folderstructure.jpg "Next JS Folder Structure")
+
+
 Here is a complete list of features Next.js provides.
 
 - **Client and Server Rendering** Flexible rendering and caching options, including Incremental Static Regeneration (ISR), on a per-page level.
@@ -23,9 +32,6 @@ Here is a complete list of features Next.js provides.
 
 - **Nested Routing** Layouts and Streaming with an intuitive file-system router, built with React Server Components and Suspense..
 [Documentation](https://beta.nextjs.org/docs/routing/fundamentals)
-
-- **Data Fetching** Data Fetching methods that run on the server and enable you to render content in different ways.
-[Documentation](https://nextjs.org/docs/basic-features/data-fetching/overview)
 
 - **Built-in Optimizations** Automatic Image, Font, and Script Optimizations for improved UX and Core Web Vitals..
 [Documentation](https://nextjs.org/docs/basic-features/image-optimization)

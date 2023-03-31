@@ -11,6 +11,14 @@ module.exports = {
         "3/2": "3 / 2",
         "2/3": "2 / 3",
         "9/16": "9 / 16"
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            "code::before": { content: '' },
+            "code::after": { content: '' }
+          }
+        }
       }
     }
   },
