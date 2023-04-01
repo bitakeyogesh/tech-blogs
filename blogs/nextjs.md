@@ -9,7 +9,6 @@ author: {
 blogImage: '/images/nextjs.jpg'
 readTime: 10
 ---
-
 Next.js is a popular and powerful React JS based framework for building full stack web applications. It provides lot of useful features out of the box such as **Server Side Rendering**, **Code Splitting**, **Routing**, **Built in SEO Support** and lot more.
 
 ![Next JS Vs React JS](/images/nextjsvsreactjs.jpg "Next JS Vs React JS")
@@ -17,8 +16,8 @@ Next.js is a popular and powerful React JS based framework for building full sta
 Next.js is not an replacement of React. Next.js is an react based framework where react js is a library to build UI components. 
 
 #### Setup using create-next-app
-- Run `npx create-next-app@latest` or you can also pass --typescript flag for typescript project.
-- Run `npm run dev`
+- Run `npx create-next-app@latest` command. also you can pass --typescript flag for typescript project.
+- Run `npm run dev` command
 - Visit `http://localhost:3000` to view application.
  
 Folder structure will look like this
