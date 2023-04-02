@@ -7,7 +7,7 @@ author: {
     avatar: '/images/yogesh_avatar.jpg'
 }
 blogImage: '/images/nextjs.jpg'
-readTime: 10
+readTime: 5
 ---
 Next.js is a popular and powerful React JS based framework for building full stack web applications. It provides lot of useful features out of the box such as **Server Side Rendering**, **Code Splitting**, **Routing**, **Built in SEO Support** and lot more.
 
