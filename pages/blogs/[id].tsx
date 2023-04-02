@@ -8,6 +8,8 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import Container from '../../components/container';
 import Image from 'next/image';
 import ReactMarkdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default function Blog({ blogData, categories }) {
     return (
@@ -54,8 +56,28 @@ export default function Blog({ blogData, categories }) {
                     </div>
                 </div>
                 <div className='container mx-auto max-w-screen-lg px-8 xl:px-5'>
-                    <article className="prose prose-img:rounded-xl prose-img:mx-auto lg:prose-img:w-1/2 max-w-screen-lg prose-lg dark:prose-invert prose-a:text-blue-500 prose-code:font-light prose-code:p-1 prose-code:rounded prose-code:italic">
-                        <ReactMarkdown children={blogData.content}></ReactMarkdown>
+                    <article className="prose prose-img:rounded-xl prose-img:mx-auto lg:prose-img:w-1/2 max-w-screen-lg prose-lg dark:prose-invert prose-a:text-blue-500 prose-code:font-light prose-code:p-1 prose-code:rounded prose-code:italic prose-code:text-xs">
+                        <ReactMarkdown
+                            children={blogData.content}
+                            components={{
+                                code({ node, inline, className, children, ...props }) {
+                                    const match = /language-(\w+)/.exec(className || '')
+                                    return !inline && match ? (
+                                        <SyntaxHighlighter
+                                            children={String(children).replace(/\n$/, '')}
+                                            language={match[1]}
+                                            style={atomDark}
+                                            PreTag="div"
+                                            {...props}
+                                        />
+                                    ) : (
+                                        <code className={className} {...props}>
+                                            {children}
+                                        </code>
+                                    )
+                                }
+                            }}
+                        />
                     </article>
                 </div>
                 <div className="flex justify-center mt-7 mb-7 mb-0">
