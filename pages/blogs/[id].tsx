@@ -16,7 +16,7 @@ export default function Blog({ blogData, categories }) {
                 <Head>
                     <title>{blogData.title}</title>
                 </Head>
-                <div className='container mx-auto max-w-screen-lg px-8 xl:px-5 -mt-8'>
+                <div className='container mx-auto max-w-screen-lg px-8 xl:px-5 -mt-8 mb-4'>
                     <div className='max-w-screen-md mx-auto'>
                         <h1 className='mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white'>
                             {blogData.title}
