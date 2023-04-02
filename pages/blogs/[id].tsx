@@ -7,6 +7,7 @@ import Date from '../../components/date';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Container from '../../components/container';
 import Image from 'next/image';
+import ReactMarkdown from "react-markdown";
 
 export default function Blog({ blogData, categories }) {
     return (
@@ -54,7 +55,7 @@ export default function Blog({ blogData, categories }) {
                 </div>
                 <div className='container mx-auto max-w-screen-lg px-8 xl:px-5'>
                     <article className="prose prose-img:rounded-xl prose-img:mx-auto lg:prose-img:w-1/2 max-w-screen-lg prose-lg dark:prose-invert prose-a:text-blue-500 prose-code:font-light prose-code:p-1 prose-code:rounded prose-code:italic">
-                        <div dangerouslySetInnerHTML={{ __html: blogData.contentHtml }} />
+                        <ReactMarkdown children={blogData.content}></ReactMarkdown>
                     </article>
                 </div>
                 <div className="flex justify-center mt-7 mb-7 mb-0">
